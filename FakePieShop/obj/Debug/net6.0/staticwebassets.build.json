@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "Fm2dWj1BPkVHrsrA9Mc1ddsH+mhY56JgR2QsD5BUbAg=",
+  "Source": "FakePieShop",
+  "BasePath": "_content/FakePieShop",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FakePieShop\\wwwroot",
+      "Source": "FakePieShop",
+      "ContentRoot": "C:\\Users\\mikay\\source\\repos\\FakePieShop\\FakePieShop\\wwwroot\\",
+      "BasePath": "_content/FakePieShop",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

@@ -1,4 +1,5 @@
 ﻿using FakePieShop.Models;
+using FakePieShop.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FakePieShop.Controllers
@@ -16,7 +17,8 @@ namespace FakePieShop.Controllers
 
         public IActionResult List()
         {
-            return View(_pieRepository.AllPies);
+            PieListViewModel pieListViewModel = new PieListViewModel(_pieRepository.AllPies, "Cheese cakes");
+            return View(pieListViewModel);
         }
     }
 }
