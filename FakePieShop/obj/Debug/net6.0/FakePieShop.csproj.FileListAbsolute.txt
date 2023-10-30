@@ -26,3 +26,4 @@ C:\Users\mikay\source\repos\FakePieShop\FakePieShop\obj\Debug\net6.0\refint\Fake
 C:\Users\mikay\source\repos\FakePieShop\FakePieShop\obj\Debug\net6.0\FakePieShop.pdb
 C:\Users\mikay\source\repos\FakePieShop\FakePieShop\obj\Debug\net6.0\FakePieShop.genruntimeconfig.cache
 C:\Users\mikay\source\repos\FakePieShop\FakePieShop\obj\Debug\net6.0\ref\FakePieShop.dll
+C:\Users\mikay\source\repos\FakePieShop\FakePieShop\bin\Debug\net6.0\libman.json
