@@ -38,7 +38,16 @@
                     },
                     new Pie
                     {
-                        PieId = 3
+                        PieId = 3,
+                        Name = "Rhubarb Pie",
+                        Price = 15.95M,
+                        ShortDescription = "Lorem Ipsum",
+                        LongDescription = "Lorem Ipsum",
+                        Category = _categoryRepository.AllCategories.ToList()[0],
+                        ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/rhubarbpie.jpg",
+                        InStock = true,
+                        IsPieOfTheWeek = false,
+                        ImageThumbnailUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/rhubarbpiesmall.jpg"
                     }
                 };
             }
