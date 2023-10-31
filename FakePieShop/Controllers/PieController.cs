@@ -17,7 +17,7 @@ namespace FakePieShop.Controllers
 
         public IActionResult List()
         {
-            PieListViewModel pieListViewModel = new PieListViewModel(_pieRepository.AllPies, "Cheese cakes");
+            PieListViewModel pieListViewModel = new PieListViewModel(_pieRepository.AllPies, "All Pies");
             return View(pieListViewModel);
         }
 
