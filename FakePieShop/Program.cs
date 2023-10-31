@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<FakePieShopDbContext>(options =>
 {
     options.UseSqlServer(
-        builder.Configuration["ConnectionStrings:FakePieShopDbContextConnection"])
+        builder.Configuration["ConnectionStrings:FakePieShopDbContextConnection"]);
 });
 
 WebApplication app = builder.Build();
