@@ -1,3 +1,4 @@
+using BethanysPieShop.Models;
 using FakePieShop.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,4 +28,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapDefaultControllerRoute();
+
+// use our own seed data
+DbInitializer.Seed(app);
+
 app.Run();
