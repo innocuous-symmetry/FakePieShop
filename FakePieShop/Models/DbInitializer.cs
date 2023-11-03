@@ -1,6 +1,4 @@
-﻿using FakePieShop.Models;
-
-namespace BethanysPieShop.Models
+﻿namespace FakePieShop.Models
 {
     public static class DbInitializer
     {

@@ -1,4 +1,3 @@
-using BethanysPieShop.Models;
 using FakePieShop.Models;
 using FakePieShop.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +15,7 @@ builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
 // configuration for MVC and entity framework core
+builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<FakePieShopDbContext>(options =>
 {
@@ -25,7 +25,8 @@ builder.Services.AddDbContext<FakePieShopDbContext>(options =>
 
 var app = builder.Build();
 
-// middlewares
+// middlewares -- ORDER MATTERS here
+// when including services to the `builder`, order does not matter
 app.UseStaticFiles();
 app.UseSession();
 
@@ -36,6 +37,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapDefaultControllerRoute();
+app.MapRazorPages();
 
 // use our own seed data
 DbInitializer.Seed(app);
