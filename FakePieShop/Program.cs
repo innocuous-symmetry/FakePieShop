@@ -7,7 +7,13 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 // add services to application
 builder.Services.AddScoped<IPieRepository, PieRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IShoppingCart, ShoppingCart>(services => ShoppingCart.GetCart(services));
 
+// include support for sessions and http context
+builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
+
+// configuration for MVC and entity framework core
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<FakePieShopDbContext>(options =>
 {
@@ -15,11 +21,11 @@ builder.Services.AddDbContext<FakePieShopDbContext>(options =>
         builder.Configuration["ConnectionStrings:FakePieShopDbContextConnection"]);
 });
 
-WebApplication app = builder.Build();
+var app = builder.Build();
 
 // middlewares
 app.UseStaticFiles();
-//app.UseAuthentication();
+app.UseSession();
 
 // dx and debugging
 if (app.Environment.IsDevelopment())

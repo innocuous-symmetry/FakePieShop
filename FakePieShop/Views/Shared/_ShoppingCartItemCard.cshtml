@@ -1,0 +1,18 @@
+﻿@model ShoppingCartItem
+
+<div class="card shopping-cart-card mb-2">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="@Model.Pie.ImageThumbnailUrl" class="img-fluid rounded-start p-2" alt="@Model.Pie.Name">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-text">@Model.Amount x @Model.Pie.Name</h5>
+                <div class="d-flex justify-content-between">
+                    <h6>@Model.Pie.ShortDescription</h6>
+                    <h2>@Model.Pie.Price.ToString("c")</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
