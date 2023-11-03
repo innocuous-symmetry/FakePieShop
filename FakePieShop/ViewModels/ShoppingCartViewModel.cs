@@ -1,4 +1,6 @@
-﻿namespace FakePieShop.Models.ViewModels
+﻿using FakePieShop.Models;
+
+namespace FakePieShop.ViewModels
 {
     public class ShoppingCartViewModel
     {

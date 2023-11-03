@@ -1,5 +1,6 @@
 using BethanysPieShop.Models;
 using FakePieShop.Models;
+using FakePieShop.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);

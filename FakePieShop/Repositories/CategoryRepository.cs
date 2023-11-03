@@ -1,4 +1,6 @@
-﻿namespace FakePieShop.Models
+﻿using FakePieShop.Models;
+
+namespace FakePieShop.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {

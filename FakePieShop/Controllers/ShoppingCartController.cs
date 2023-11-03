@@ -1,5 +1,6 @@
 ﻿using FakePieShop.Models;
-using FakePieShop.Models.ViewModels;
+using FakePieShop.ViewModels;
+using FakePieShop.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FakePieShop.Controllers

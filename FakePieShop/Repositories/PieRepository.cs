@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FakePieShop.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace FakePieShop.Models
+namespace FakePieShop.Repositories
 {
     public class PieRepository : IPieRepository
     {

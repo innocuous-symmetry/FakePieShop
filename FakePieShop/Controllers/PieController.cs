@@ -1,5 +1,6 @@
 ﻿using FakePieShop.Models;
-using FakePieShop.Models.ViewModels;
+using FakePieShop.Repositories;
+using FakePieShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FakePieShop.Controllers
@@ -15,9 +16,23 @@ namespace FakePieShop.Controllers
             _categoryRepository = categoryRepository;
         }
 
-        public IActionResult List()
+        public IActionResult List(string category)
         {
-            PieListViewModel pieListViewModel = new PieListViewModel(_pieRepository.AllPies, "All Pies");
+            IEnumerable<Pie> pies;
+            string? currentCategory;
+
+            if (string.IsNullOrEmpty(category))
+            {
+                pies = _pieRepository.AllPies.OrderBy(p => p.PieId);
+                currentCategory = "All pies";
+            }
+            else
+            {
+                pies = _pieRepository.AllPies.Where(p => p.Category.CategoryName == category).OrderBy(p => p.PieId);
+                currentCategory = _categoryRepository.AllCategories.FirstOrDefault(c => c.CategoryName == category)?.CategoryName;
+            }
+
+            PieListViewModel pieListViewModel = new(pies, currentCategory);
             return View(pieListViewModel);
         }
 
