@@ -32,5 +32,8 @@ namespace FakePieShop.Repositories
         {
             return _fakePieShopDbContext.Pies.FirstOrDefault(p => p.PieId == pieId);
         }
+
+        public IEnumerable<Pie> SearchPies(string searchQuery) => 
+            _fakePieShopDbContext.Pies.Where(p => p.Name.Contains(searchQuery));
     }
 }
